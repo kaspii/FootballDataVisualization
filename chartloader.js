@@ -2,6 +2,10 @@ Chart.defaults.global.responsive = true;
 var ctxOverall = document.getElementById("overallChart").getContext("2d");
 var ctxRushing = document.getElementById("rushingChart").getContext("2d");
 var ctxPassing = document.getElementById("passingChart").getContext("2d");
+var ctxKicking = document.getElementById("kickingChart").getContext("2d");
+var ctxTurnovers = document.getElementById("turnoversChart").getContext("2d");
+var ctxOther = document.getElementById("otherChart").getContext("2d");
+
 
 //Offense color scheme RGBs
 var fillColorO = "rgba(220,220,220,0.2)",
@@ -98,34 +102,83 @@ var dataPassing = {
     ]
 };
 
-
-
-data2 = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+var dataKicking = {
+    labels: ["FG Conversion %"],
     datasets: [
         {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
+            label: "Offense",
+            fillColor: fillColorO,
+            strokeColor: strokeColorO,
+            pointColor: pointColorO,
+            pointStrokeColor: pointStrokeColorO,
+            pointHighlightFill: pointHighlightFillO,
+            pointHighlightStroke: pointHighlightStrokeO,
+            data: [44]
         },
         {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            label: "Defense",
+            fillColor: fillColorD,
+            strokeColor: strokeColorD,
+            pointColor: pointColorD,
+            pointStrokeColor: pointStrokeColorD,
+            pointHighlightFill: pointHighlightFillD,
+            pointHighlightStroke: pointHighlightStrokeD,
+            data: [35]
         }
     ]
 };
 
+var dataTurnovers = {
+    labels: ["Int Thrown %"],
+    datasets: [
+        {
+            label: "Offense",
+            fillColor: fillColorO,
+            strokeColor: strokeColorO,
+            pointColor: pointColorO,
+            pointStrokeColor: pointStrokeColorO,
+            pointHighlightFill: pointHighlightFillO,
+            pointHighlightStroke: pointHighlightStrokeO,
+            data: [44]
+        },
+        {
+            label: "Defense",
+            fillColor: fillColorD,
+            strokeColor: strokeColorD,
+            pointColor: pointColorD,
+            pointStrokeColor: pointStrokeColorD,
+            pointHighlightFill: pointHighlightFillD,
+            pointHighlightStroke: pointHighlightStrokeD,
+            data: [35]
+        }
+    ]
+};
+
+var dataOther = {
+    labels: ["TOP % (net OT)"],
+    datasets: [
+        {
+            label: "Offense",
+            fillColor: fillColorO,
+            strokeColor: strokeColorO,
+            pointColor: pointColorO,
+            pointStrokeColor: pointStrokeColorO,
+            pointHighlightFill: pointHighlightFillO,
+            pointHighlightStroke: pointHighlightStrokeO,
+            data: [44]
+        },
+        {
+            label: "Defense",
+            fillColor: fillColorD,
+            strokeColor: strokeColorD,
+            pointColor: pointColorD,
+            pointStrokeColor: pointStrokeColorD,
+            pointHighlightFill: pointHighlightFillD,
+            pointHighlightStroke: pointHighlightStrokeD,
+            data: [35]
+        }
+    ]
+};
 
 var options = {
 
@@ -179,5 +232,9 @@ var options = {
 var overallChart = new Chart(ctxOverall).HorizontalBar(dataOverall);
 var rushingChart = new Chart(ctxRushing).HorizontalBar(dataRushing);
 var passingChart = new Chart(ctxPassing).HorizontalBar(dataPassing);
+var kickingChart = new Chart(ctxKicking).HorizontalBar(dataKicking);
+var turnoversChart = new Chart(ctxTurnovers).HorizontalBar(dataTurnovers);
+var otherChart = new Chart(ctxOther).HorizontalBar(dataOther);
+
 
 
