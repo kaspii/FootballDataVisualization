@@ -1,0 +1,21 @@
+#gamedaychart{
+	float: right;
+	background: white;
+	border: black 1px solid;
+	max-width: 380px;
+	max-height: 600px;
+	min-width: 380px;
+	min-height: 600px;
+	padding: 3px;
+}
+
+.sectionChart{
+	width: 70%;
+	max-width: 300px;
+}
+
+.sectionTitle{
+	text-align: center;
+	font-family: Roboto;
+	font-size: 22px;
+}
