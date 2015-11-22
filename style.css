@@ -13,8 +13,8 @@ h1{
 }
 
 #gamedaychart{
-	background: white;
-	border: #3284BF 1px solid;
+	background-color: white;
+	border: #A3A3A3 1px solid;
 	padding: 3px;
 	max-height: 600px;
 	overflow: scroll;
