@@ -7,9 +7,11 @@ google.setOnLoadCallback(function() {
     generateCharts(0);
 });
 
-$(window).resize(function(){
+// Disable respnsiveness for now
+// causing weird bugs
+/*$(window).resize(function(){
   generateCharts(0);
-});
+});*/
 
 function generateChartDivs() {
     for(var i = 0; i < data.length; i++)

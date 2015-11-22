@@ -1,6 +1,5 @@
-
+// Processes input data so that it can be used with google charts
 function processData(data){
-
     data = data.categories;
 
     var processedData = [];
@@ -30,6 +29,7 @@ function processData(data){
     return processedData;
 }
 
+// Seperates percent and non-percent values
 function sepOffenseDefenseObjs(data){
     var percentValues = [];
     var valuesValues = [];
