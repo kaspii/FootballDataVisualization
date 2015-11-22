@@ -31,8 +31,13 @@ h1{
 }
 
 .sectionChart{
-	width: 70%;
-	max-width: 90%;
+	width: 90%;
     margin-left: 20px;
     display: block;
+}
+
+.sectionTitle {
+	padding: 5px;
+	padding-top: 15px;
+
 }

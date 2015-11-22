@@ -6,17 +6,25 @@ function processData(data){
     var processedData = [];
 
     for (var i = 0; i < data.length; i++) {
+        var temp = {};
+
         var currObj = {};
         processedData[i] = currObj;
-        currObj["name"] = data[i].name;
-        currObj["offense"] = sepOffenseDefenseObjs(data[i].offense);
-        currObj["defense"] = sepOffenseDefenseObjs(data[i].defense);
-        currObj["percentLabels"] = currObj["offense"]["percentLabels"].slice();
-        currObj["valueLabels"] = currObj["offense"]["valueLabels"].slice();
-        delete currObj["offense"]["percentLabels"];
-        delete currObj["offense"]["valueLabels"];
-        delete currObj["defense"]["percentLabels"];
-        delete currObj["defense"]["valueLabels"];
+
+        currObj["title"] = data[i].name;
+
+        var currArray = [];
+        currObj["data"] = currArray;
+
+        temp["offense"] = sepOffenseDefenseObjs(data[i].offense);
+        temp["defense"] = sepOffenseDefenseObjs(data[i].defense);
+
+        currArray[0] = ['', 'Offense', 'Defense'];
+        var labelCount = temp["offense"]["percentLabels"].length;
+        for(var j = 0; j < labelCount; j++)
+        {
+            currArray[j+1] = [temp["offense"]["percentLabels"][j], temp["offense"]["percent"][j],  temp["defense"]["percent"][j]];
+        }
     }
 
     return processedData;
