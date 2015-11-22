@@ -19,6 +19,7 @@ h1{
 	max-height: 600px;
 	overflow: scroll;
 	overflow-x: hidden;
+	padding:20px;
 }
 
 #statsTitle {
