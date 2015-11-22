@@ -6,7 +6,6 @@ var ctxKicking = document.getElementById("kickingChart").getContext("2d");
 var ctxTurnovers = document.getElementById("turnoversChart").getContext("2d");
 var ctxOther = document.getElementById("otherChart").getContext("2d");
 
-
 //Offense color scheme RGBs
 var fillColorO = "rgba(220,220,220,0.2)",
     strokeColorO = "rgba(220,220,220,1)",
@@ -235,6 +234,3 @@ var passingChart = new Chart(ctxPassing).HorizontalBar(dataPassing);
 var kickingChart = new Chart(ctxKicking).HorizontalBar(dataKicking);
 var turnoversChart = new Chart(ctxTurnovers).HorizontalBar(dataTurnovers);
 var otherChart = new Chart(ctxOther).HorizontalBar(dataOther);
-
-
-

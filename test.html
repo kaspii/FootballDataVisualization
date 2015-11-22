@@ -5,29 +5,18 @@
 		<script src="Chart.Core.js"></script>
 		<script src="Chart.HorizontalBar.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<div id="gamedaychart">
-			<div class="section" id="OverallStats">
-				<h1 class="sectionTitle">Overall Statistics</h1>
-				<canvas id="overallChart" class="sectionChart" width="200px" height="150px">
-				</canvas>
-				<canvas id="rushingChart" class="sectionChart" width="200px" height="50px">
-				</canvas>
-				<canvas id="passingChart" class="sectionChart" width="200px" height="200px">
-				</canvas>
-				<canvas id="kickingChart" class="sectionChart" width="200px" height="200px">
-				<canvas id="turnoversChart" class="sectionChart" width="200px" height="200px">
-				</canvas>
-				<canvas id="otherChart" class="sectionChart" width="200px" height="200px">
+		<div id="gamedaystats">
+			<div id="statsTitleBox">
+				<h1 id="statsTitle"> Season Stats </h1>
+			</div>
+			<div id="gamedaychart">
 
-
-				<div class="sectionStatic">
-				</div>
 			</div>
 		</div>
 	</body>
-	
-		<script src="chartloader.js"></script>
+	<script src="dataprocesser.js"></script>
+	<script src="chartgenerator.js"></script>
 </html>
