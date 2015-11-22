@@ -14,7 +14,7 @@ h1{
 
 #gamedaychart{
 	background: white;
-	border: black 1px solid;
+	border: #3284BF 1px solid;
 	padding: 3px;
 	max-height: 600px;
 	overflow: scroll;
@@ -23,21 +23,15 @@ h1{
 }
 
 #statsTitle {
-	font-size: 25px;
+	font-size: 22px;
 	color: white;
-	background-color: black;
+	background-color: #3284BF;
 	padding: 10px;
 	margin: -2px;
 }
 
 .sectionChart{
 	width: 90%;
-    margin-left: 20px;
+	margin-bottom: 25px;
     display: block;
-}
-
-.sectionTitle {
-	padding: 5px;
-	padding-top: 15px;
-
 }

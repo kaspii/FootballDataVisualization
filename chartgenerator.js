@@ -19,20 +19,22 @@ function generateChartDivs() {
         var key = data[i].title.replace(/\W/g, '');
         var currSection = '<div class="section" id="' + key + 'Section">'
         var currCanvas = '<div id="' + key + 'Chart" class="sectionChart"></div>';
-        var nameHeader = '<h1 class="sectionTitle">' + data[i].title + '</h1>'
         //debugger;
         $("#gamedaychart").append(currSection);
-        $("#" + key + "Section").append(nameHeader);
         $("#" + key + "Section").append(currCanvas);
     }
 }
 
 function generateCharts(i){
     var options = {
-      'bars': 'horizontal', // Required for Material Bar Charts.
-      'colors': ['#3284BF', '#FFE800'],
-      'height': data[i].data.length * 70 - 50,
-      'legend': {position: 'none'}
+        chart : {
+            title : data[i].title,
+            subtitle: 'do we want a subheader?',
+        },
+        bars: 'horizontal', // Required for Material Bar Charts.
+        colors: ['#3284BF', '#FFE800'],
+        height: data[i].data.length * 70,
+        legend: {position: 'none'}
     };
 
     var key = data[i].title.replace(/\W/g, '');
