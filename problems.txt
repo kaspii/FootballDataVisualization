@@ -1,0 +1,9 @@
+Important stuff to fix now
+> stuff is cut off (titles for each value in charts)
+> need to figure out how to resize charts properly
+> need to add in data that is not in charts (non-percentage data)
+> make it scrollable
+
+
+More minor stuff 
+> something we could do (easy): change colors
