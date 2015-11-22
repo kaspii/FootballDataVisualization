@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["bar"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', 'Offense', 'Defense'],
+          ['RZ Scoring %', 37, 89],
+          ['3D Conversion %', 50, 50],
+          ['4D Conversion %', 81, 41],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Overall Statistics',
+            subtitle: 'Some sort of subheader',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="gamedaystats">
+      <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+    </div>
+  </body>
+</html>
