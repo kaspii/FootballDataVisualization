@@ -37,3 +37,28 @@ h1{
 	margin-bottom: 25px;
     display: block;
 }
+
+.valueText {
+	cursor: default;
+	-webkit-user-select: none;
+	-webkit-font-smoothing: antialiased;
+	font-family: Roboto2;
+	font-size: 12px;
+}
+
+#gamedaychart::-webkit-scrollbar {
+  width: 5px;
+  padding-right: 6px;
+}
+
+#gamedaychart::-webkit-scrollbar-thumb:vertical {
+  margin: 5px;
+  background-color: #999;
+  -webkit-border-radius: 5px;
+}
+
+#gamedaychart::-webkit-scrollbar-button:start:decrement,
+#gamedaychart::-webkit-scrollbar-button:end:increment {
+  height: 5px;
+  display: block;
+}

@@ -13,7 +13,7 @@ function processData(data){
         currObj["title"] = data[i].name;
 
         var currArray = [];
-        currObj["data"] = currArray;
+        currObj["percentData"] = currArray;
 
         temp["offense"] = sepOffenseDefenseObjs(data[i].offense);
         temp["defense"] = sepOffenseDefenseObjs(data[i].defense);
